@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-transform: uppercase;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    font-family: "poppins",sans-serif;
+    z-index: 1;
+}
+header h1{
+padding-inline: 1rem;
+font-weight: 600;
+}
+header h1 span {
+    font-family: "Bungee Tint", sans-serif;
+}
+header img{
+    height: 3rem;
+}
+.container{
+    padding-top: 3rem;
+}
+.split{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    padding-top: 3rem;
+}
+.left{
+    position: absolute;
+    left: 0;
+    background-color: #addcee;
+    background-image: url("https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708671939/Croma%20Assets/Communication/Mobiles/Images/300679_0_ywgnrd.png" );
+    background-size:80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.right{
+    position: absolute;
+    right: 0;
+    background-color: #f4f4f4;
+    background-image: url("https://images.samsung.com/is/image/samsung/p6pim/eg/2401/gallery/eg-galaxy-s24-s928-sm-s928bztcmea-539296179?$650_519_PNG$");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.split h1{
+    font-size: 7rem;
+    color: lightcyan;
+    backdrop-filter: brightness(.5) ;
+    margin-block: 5rem;
+    letter-spacing: .3rem;
+}
+.split .btn{
+    background-color: black;
+    cursor: pointer;
+    color: #fff;
+    padding: 1rem 4rem;
+    border-radius:.3rem ;
+    font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.split .btn::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s;
+}
+.split .btn span{
+    position: relative;
+    z-index: 1;
+}
+.btn:hover::after,.btn:hover span{
+width: 100%;
+color: black;
+}
+.active-left .left{
+    width: 75%;
+}
+.active-left .right{
+    width: 25%;
+}
+.active-right .left{
+    width: 25%;
+}
+.active-right .right{
+    width: 75%;
+}
+.left,.right{
+    transition: .9s width ease-in-out;
+}
